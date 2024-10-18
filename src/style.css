@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.HUD {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.infos, .gameInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 1rem;
+}
+
+.infos h2, .gameInfos h2 {
+    text-align: center;
+}
+.infos p {
+    text-align: justify;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.case {
+    border: 1px solid #000;
+    width: 50px;
+    height: 50px;
+}
+
+.cross {
+    background-color: red;
+}
+.circle {
+    background-color: yellow;
+}
+span .indicator {
+    width: 20px;
+    height: 20px;
+}
+span.red .indicator {
+    background-color: red;
+}
+
+span.yellow .indicator {
+    background-color: yellow;
+}
+
+.hidden {
+    display: none;
+}
+
+#victoryMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2em;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#victoryMessage.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 768px) {
+    .HUD {
+        flex-direction: column;
+        width: 100%;
+    }
+    .infos, .gameInfos {
+        width: 100%;
+    }
+
+    
+}

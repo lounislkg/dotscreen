@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../dist/script.js" defer></script>
+</head>
+<body>
+    <h1>Connect 4</h1>
+    <div class="HUD">
+        <div class="infos">
+            <div class="rules">
+                <h2>Rules</h2>
+                <p>Connect 4 is a two-player connection game in which the players first choose a color and then take turns dropping colored discs from the top into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.</p>
+            </div>
+            <div class="howtoplay">
+                <h2>How to play</h2>
+                <p>Click on the column you want to drop your piece in. The piece will fall to the lowest available space in the column.</p>
+            </div>
+        </div>
+        <div class="main">
+
+        </div>
+        <div class="gameInfos">
+            <p>Player turn : <span id="currentPlayer"> <div class="indicator"></div></span></p>
+            <div class="resetGame">
+                <button id="resetButton">Reset Game</button>
+            </div>
+            <div class="errorInfos">
+                <p id="errorInfos"></p>
+            </div>
+        </div>
+    </div>
+    <div id="victoryMessage" class="hidden">
+        Player <span id="winner"></span> won! 
+        <div class="playAgain">
+            <button id="playAgainButton">Play Again</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
